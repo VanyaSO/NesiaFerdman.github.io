@@ -25,10 +25,10 @@
 
   &__description,
   &__list-item {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $secondary-font;
     font-weight: 300;
     font-size: 18px;
-    line-height: 140%;
+    line-height: 25.2px;
     color: $gray-light;
   }
 
@@ -40,7 +40,7 @@
     padding-left: 24px;
 
     &-title {
-      font-family: 'Cormorant Infant', sans-serif;
+      font-family: $primary-font;
       font-weight: 600;
       font-size: 24px;
       line-height: 120%;
@@ -76,7 +76,7 @@
     }
 
     &-title {
-      font-family: "Cormorant Infant", sans-serif;
+      font-family: $primary-font;
       font-weight: 600;
       font-size: 24px;
       line-height: 120%;
@@ -93,7 +93,7 @@
 
     .tile-list__item,
     &-description {
-      font-family: "Open Sans", sans-serif;
+      font-family: $secondary-font;
       font-size: 18px;
       font-weight: 300;
       line-height: 25.2px;

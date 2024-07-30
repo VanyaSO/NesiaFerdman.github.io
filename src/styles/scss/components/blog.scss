@@ -15,7 +15,7 @@
     padding: 4px;
     margin: 0 auto 32px;
     background-color: $gray-secondary;
-    border-radius: 16px;
+    border-radius: 100px;
 
     @media (min-width: $media-desktop) {
       margin-bottom: 64px;
@@ -27,9 +27,9 @@
     padding: 10px;
     color: $gray-extra-light;
     background-color: transparent;
-    border-radius: 16px;
+    border-radius: 100px;
 
-    font-family: 'Open Sans', sans-serif;
+    font-family: $secondary-font;
     font-size: 18px;
     font-weight: 300;
     line-height: 25.2px;
@@ -40,12 +40,12 @@
     &.active {
       color: $black;
       background-color: $white;
-
     }
   }
 
   .slider-item {
-    margin: 0 8px;
+    margin-right: 12px;
+    margin-left: 4px;
     border-radius: 16px;
     overflow: hidden;
 
@@ -78,7 +78,7 @@
       text-overflow: ellipsis;
       max-height: 4em;
       margin-right: 12px;
-      font-family: 'Open Sans', sans-serif;
+      font-family: $secondary-font;
       font-size: 16px;
       line-height: 22.4px;
       color: $white;
@@ -139,7 +139,7 @@
         width: 100%;
         border-radius: 12px;
         cursor: pointer;
-        transition: ease .3s;
+        transition: ease .8s;
 
         &.slick-active {
           background-color: $gray-neutral;

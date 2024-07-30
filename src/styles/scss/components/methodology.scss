@@ -10,7 +10,7 @@
     display: grid;
     grid-template-columns: max(360px);
     justify-content: center;
-    gap: 28px;
+    gap: 16px;
 
     @media (min-width: $media-tablet) {
       grid-template-columns: repeat(2, max(360px));
@@ -18,7 +18,7 @@
 
     @media (min-width: $media-desktop) {
       grid-template-columns: repeat(4, max(300px));
-      gap: 22px;
+      gap: 24px;
       margin-top: 64px;
     }
   }
@@ -33,6 +33,7 @@
     background-color: $gray-neutral;
     cursor: pointer;
     transition: ease .3s;
+    font-family: $secondary-font;
 
     @media (min-width: $media-desktop) {
       flex-direction: column;
@@ -51,7 +52,7 @@
 
     &-number {
       margin-right: 24px;
-      font-family: 'Cormorant Infant', sans-serif;
+      font-family: $primary-font;
       font-weight: 400;
       font-size: 64px;
       line-height: 120%;
@@ -65,7 +66,7 @@
     }
 
     &-description {
-      font-family: 'Open Sans', sans-serif;
+      font-family: $secondary-font;
       font-weight: 300;
       font-size: 24px;
       line-height: 120%;

@@ -19,7 +19,7 @@ html {
 .container {
   padding-right: 16px;
   padding-left: 16px;
-  max-width: calc(1280px - 16px);
+  max-width: calc(1280px + 32px);
   margin: 0 auto;
 }
 
@@ -41,8 +41,8 @@ html {
   }
 
   &__title {
-    font-family: 'Cormorant Infant', sans-serif;
-    font-weight: 500;
+    font-family: $primary-font;
+    font-weight: 400;
     font-size: 32px;
     line-height: 38.4px;
     margin-bottom: 16px;
@@ -62,7 +62,7 @@ html {
   &__subtitle {
     max-width: 624px;
     margin: 0 auto;
-    font-family: 'Open Sans', sans-serif;
+    font-family: $secondary-font;
     font-weight: 400;
     font-size: 18px;
     line-height: 25.2px;
@@ -88,10 +88,10 @@ html {
   height: 58px;
   border: none;
   border-radius: 56px;
-  font-family: "Open Sans", sans-serif;
+  font-family: $secondary-font;
   font-weight: 400;
   font-size: 18px;
-  line-height: 140%;
+  line-height: 25.2px;
   color: $white;
 
   transition: ease .3s;
