@@ -1,9 +1,26 @@
 $(document).ready(function() {
-	let dataBlog = {};
-	$.getJSON('blog.json', function(response) {
-		dataBlog = response;
-		renderBlogPostsInSlider(getAllPostsByCategory(1));
-	});
+	let dataBlog = {
+		"posts": [
+			{
+				"id": 1,
+				"image": "./src/images/blog-image1.png",
+				"title": "«Успішність людини визначається...",
+				"categories": [1, 2]
+			},
+			{
+				"id": 2,
+				"image": "./src/images/blog-image2.png",
+				"title": "Несія Фердман: Між вами та коучем має бути...",
+				"categories": [1,2]
+			},
+			{
+				"id": 3,
+				"image": "./src/images/blog-image3.png",
+				"title": "Чому хаос у житті – ознака особистісного розвитку?",
+				"categories": [1]
+			}
+		]
+	};
 
 	const sliderSettings = {
 		slidesToShow: 3,
@@ -25,6 +42,8 @@ $(document).ready(function() {
 			}
 		]
 	};
+
+	renderBlogPostsInSlider(getAllPostsByCategory(1));
 
 	function getAllPostsByCategory(categoryId) {
 		return dataBlog.posts.filter(post => post.categories.includes(categoryId))
