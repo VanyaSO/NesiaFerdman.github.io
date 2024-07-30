@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	let dataBlog = {};
-	$.getJSON('../../src/blog.json', function(response) {
+	$.getJSON('blog.json', function(response) {
 		dataBlog = response;
 		renderBlogPostsInSlider(getAllPostsByCategory(1));
 	});
