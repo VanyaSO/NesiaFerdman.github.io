@@ -1,0 +1,28 @@
+.learn-more {
+  position: relative;
+  padding: 80px 0;
+  background-color: #042F4C;
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__subtitle {
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+
+  .learn-more__bg-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    opacity: .03;
+  }
+}

@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: $white;
+}
+
+.container {
+  padding-right: 16px;
+  padding-left: 16px;
+  max-width: calc(1280px - 16px);
+  margin: 0 auto;
+}
+
+.section {
+  &-margin {
+    margin: 152px 0;
+
+    @media (min-width: $media-desktop) {
+      margin: 152px 0;
+    }
+  }
+
+  &__head {
+    margin-bottom: 32px;
+
+    @media (min-width: $media-desktop) {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__title {
+    font-family: 'Cormorant Infant', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38.4px;
+    margin-bottom: 16px;
+    text-align: center;
+
+    @media (min-width: $media-tablet) {
+      margin-bottom: 24px;
+      font-size: 46px;
+    }
+
+    @media (min-width: $media-desktop) {
+      font-weight: 400;
+      font-size: 48px;
+    }
+  }
+
+  &__subtitle {
+    max-width: 624px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25.2px;
+    text-align: center;
+  }
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+
+  @media (min-width: $media-desktop) {
+    margin-top: 48px;
+  }
+}
+
+.btn {
+  padding: 16px 24px;
+  width: 100%;
+  min-width: 190px;
+  height: 58px;
+  border: none;
+  border-radius: 56px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: $white;
+
+  transition: ease .3s;
+  cursor: pointer;
+
+  @media (min-width: $media-tablet) {
+    width: fit-content;
+  }
+}
+
+.primary-button {
+  background-color: $primary-blue;
+
+  &:hover {
+    background-color: $primary-blue-hover;
+  }
+  &:focus {
+    background-color: $primary-blue-focus;
+  }
+}
+
+.secondary-button {
+  background-color: transparent;
+  border: 2px solid $gray-extra-light;
+
+  @media (min-width: $media-tablet) {
+    width: fit-content;
+  }
+
+  &:hover {
+    border-color: $gray-extra-light;
+  }
+  &:focus {
+    border-color: $white;
+  }
+}
+
+.slick {
+  &-slider {
+    min-width: 0;
+  }
+
+  &-list {
+    overflow: hidden;
+  }
+
+  &-track{
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.header,
+.footer {
+  height: 48px;
+  background-color: $black;
+  text-align: center;
+  align-content: center;
+}

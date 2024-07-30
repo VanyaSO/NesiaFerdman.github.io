@@ -1,0 +1,108 @@
+.individual-work {
+  &__content {
+    margin-bottom: 24px;
+
+    @media (min-width: $media-tablet) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 64px;
+    }
+  }
+
+  &__image{
+    width: 100%;
+  }
+
+  &__text {
+    width: 100%;
+    margin-bottom: 32px;
+
+    @media (min-width: $media-tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__description,
+  &__list-item {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 140%;
+    color: $gray-light;
+  }
+
+  &__description {
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    padding-left: 24px;
+
+    &-title {
+      font-family: 'Cormorant Infant', sans-serif;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 120%;
+      color: $white;
+      margin-bottom: 16px;
+    }
+
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__tiles {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+
+    @media (min-width: $media-desktop) {
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+  }
+
+  &__tile {
+    border-radius: 16px;
+    padding: 16px;
+    background-color: $gray-secondary;
+
+    @media (min-width: $media-desktop) {
+      padding: 24px;
+    }
+
+    &-title {
+      font-family: "Cormorant Infant", sans-serif;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 120%;
+      text-align: center;
+      color: $white;
+      margin-bottom: 16px;
+
+      @media (min-width: $media-desktop) {
+        font-weight: 500;
+        font-size: 32px;
+        margin-bottom: 24px;
+      }
+    }
+
+    .tile-list__item,
+    &-description {
+      font-family: "Open Sans", sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 25.2px;
+      color: $gray-extra-light;
+    }
+
+    .tile-list {
+      padding-left: 24px;
+      list-style-type: inherit;
+    }
+  }
+}

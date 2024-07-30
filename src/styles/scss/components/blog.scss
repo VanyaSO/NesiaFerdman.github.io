@@ -1,0 +1,159 @@
+.blog {
+
+  &__title {
+    margin-bottom: 32px;
+
+    @media (min-width: $media-desktop) {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__switches {
+    display: flex;
+    width: fit-content;
+    gap: 4px;
+    padding: 4px;
+    margin: 0 auto 32px;
+    background-color: $gray-secondary;
+    border-radius: 16px;
+
+    @media (min-width: $media-desktop) {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__switch {
+    width: 160px;
+    padding: 10px;
+    color: $gray-extra-light;
+    background-color: transparent;
+    border-radius: 16px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25.2px;
+    text-align: center;
+    transition: ease .3s;
+    cursor: pointer;
+
+    &.active {
+      color: $black;
+      background-color: $white;
+
+    }
+  }
+
+  .slider-item {
+    margin: 0 8px;
+    border-radius: 16px;
+    overflow: hidden;
+
+    @media (min-width: $media-desktop) {
+      margin: 0 12px;
+    }
+
+    &__image {
+      width: 100%;
+      margin-bottom: -4px;
+    }
+
+    &__content {
+      display: flex;
+      align-content: center;
+      background-color: $gray-secondary;
+      padding: 16px;
+      height: 100px;
+
+      @media (min-width: $media-desktop) {
+        height: 90px;
+      }
+    }
+
+    &__title {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-height: 4em;
+      margin-right: 12px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+      line-height: 22.4px;
+      color: $white;
+
+      @media (min-width: $media-desktop) {
+        -webkit-line-clamp: 2;
+        max-height: 3em;
+        margin-right: 16px;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 28.8px;
+      }
+    }
+
+    &__link-wrapper {
+      align-self: center;
+    }
+
+    &__link {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $primary-blue;
+      border-radius: 50px;
+      transition: ease .3s;
+
+      &:hover {
+        background-color: $primary-blue-hover;
+      }
+
+      &:focus {
+        background-color: $primary-blue-focus;
+      }
+    }
+  }
+
+  &-slider__dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    padding: 0 28px;
+
+    @media (min-width: $media-tablet) {
+      display: none;
+    }
+
+    ul {
+      width: 100%;
+      display: flex;
+      height: 6px;
+      background-color: $gray-secondary;
+      list-style-type: none;
+      border-radius: 12px;
+
+      li {
+        width: 100%;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: ease .3s;
+
+        &.slick-active {
+          background-color: $gray-neutral;
+        }
+
+        &:hover {
+          background-color: $gray-light;
+        }
+
+        button {
+          border: none;
+          font-size: 0;
+        }
+      }
+    }
+  }
+}
