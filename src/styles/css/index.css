@@ -7,11 +7,14 @@
 
 html, body {
   overflow-x: hidden;
-  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   background-color: #000;
   color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -177,8 +180,8 @@ html, body {
   align-items: center;
   border-radius: 16px;
   padding: 12px 16px;
-  color: #fff;
   text-decoration: none;
+  color: #fff;
   background-color: #323A45;
   cursor: pointer;
   transition: ease 0.3s;

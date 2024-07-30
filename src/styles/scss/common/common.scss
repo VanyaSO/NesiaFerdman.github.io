@@ -6,11 +6,14 @@
 
 html, body {
   overflow-x: hidden;
-  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   background-color: #000;
   color: $white;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .container {
