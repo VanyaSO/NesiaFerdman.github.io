@@ -4,18 +4,21 @@ $(document).ready(function() {
 			{
 				"id": 1,
 				"image": "./src/images/blog-image1.png",
+				"imageMob": "./src/images/blog-image1-mob.png",
 				"title": "«Успішність людини визначається...",
 				"categories": [1, 2]
 			},
 			{
 				"id": 2,
 				"image": "./src/images/blog-image2.png",
+				"imageMob": "./src/images/blog-image2-mob.png",
 				"title": "Несія Фердман: Між вами та коучем має бути...",
 				"categories": [1,2]
 			},
 			{
 				"id": 3,
 				"image": "./src/images/blog-image3.png",
+				"imageMob": "./src/images/blog-image3-mob.png",
 				"title": "Чому хаос у житті – ознака особистісного розвитку?",
 				"categories": [1]
 			}
@@ -27,6 +30,9 @@ $(document).ready(function() {
 		dots: true,
 		appendDots: $('.blog-slider__dots'),
 		arrows: false,
+		focusOnSelect: true,
+		infinite: true,
+		centerMode: false,
 		responsive: [
 			{
 				breakpoint: 768,
@@ -37,10 +43,14 @@ $(document).ready(function() {
 			{
 				breakpoint: 480,
 				settings: {
-					slidesToShow: 1,
+					slidesToShow: 1.2,
+					centerMode: true,
 				}
 			}
-		]
+		],
+		customPaging: function () {
+			return $('<button type="button" />');
+		}
 	};
 
 	renderBlogPostsInSlider(getAllPostsByCategory(1));
@@ -58,7 +68,10 @@ $(document).ready(function() {
 		posts.forEach(post => {
 			$('.blog-slider').append(`
         <div class="blog-slider__item slider-item">
-            <img src="${post.image}" alt="" class="slider-item__image">
+            <picture>
+              	<source srcset="${post.image}" media="(min-width: 1024px)">
+              	<img src="${post.imageMob}" alt="learn-more__bg-image" class="slider-item__image">
+            </picture>
             <div class="slider-item__content">
                 <p class="slider-item__title">${post.title}</p>
                 <div class="slider-item__link-wrapper">
