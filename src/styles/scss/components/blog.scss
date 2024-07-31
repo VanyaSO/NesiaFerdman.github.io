@@ -1,5 +1,13 @@
 .blog {
 
+  &__content {
+    min-height: 360px;
+
+    @media (min-width: $media-tablet) {
+      min-height: 498px;
+    }
+  }
+
   &__title {
     margin-bottom: 32px;
 

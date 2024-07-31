@@ -518,6 +518,14 @@ html {
   opacity: 0.03;
 }
 
+.blog__content {
+  min-height: 360px;
+}
+@media (min-width: 768px) {
+  .blog__content {
+    min-height: 498px;
+  }
+}
 .blog__title {
   margin-bottom: 32px;
 }
