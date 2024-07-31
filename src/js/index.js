@@ -1,38 +1,10 @@
 $(document).ready(function() {
-	let dataBlog = {
-		"posts": [
-			{
-				"id": 1,
-				"image": "./src/images/blog-image1.png",
-				"imageMob": "./src/images/blog-image1-mob.png",
-				"title": "«Успішність людини визначається...",
-				"categories": [1, 2]
-			},
-			{
-				"id": 2,
-				"image": "./src/images/blog-image2.png",
-				"imageMob": "./src/images/blog-image2-mob.png",
-				"title": "Несія Фердман: Між вами та коучем має бути...",
-				"categories": [1,2]
-			},
-			{
-				"id": 3,
-				"image": "./src/images/blog-image3.png",
-				"imageMob": "./src/images/blog-image3-mob.png",
-				"title": "Чому хаос у житті – ознака особистісного розвитку?",
-				"categories": [1]
-			}
-		]
-	};
-
 	const sliderSettings = {
 		slidesToShow: 3,
 		dots: true,
 		appendDots: $('.blog-slider__dots'),
 		arrows: false,
-		focusOnSelect: true,
-		infinite: true,
-		centerMode: false,
+		infinite: false,
 		responsive: [
 			{
 				breakpoint: 768,
@@ -43,61 +15,28 @@ $(document).ready(function() {
 			{
 				breakpoint: 480,
 				settings: {
-					slidesToShow: 1.2,
-					centerMode: true,
+					slidesToShow: 1.4,
 				}
 			}
 		],
-		customPaging: function () {
-			return $('<button type="button" />');
-		}
 	};
 
-	renderBlogPostsInSlider(getAllPostsByCategory(1));
+	$('.blog-slider').slick(sliderSettings);
 
-	function getAllPostsByCategory(categoryId) {
-		return dataBlog.posts.filter(post => post.categories.includes(categoryId))
-	}
-
-	function renderBlogPostsInSlider(posts) {
-		if ($('.blog-slider').hasClass('slick-initialized')) {
-			$('.blog-slider').slick('unslick');
-		}
-		$('.blog-slider').empty();
-
-		posts.forEach(post => {
-			$('.blog-slider').append(`
-        <div class="blog-slider__item slider-item">
-            <picture>
-              	<source srcset="${post.image}" media="(min-width: 1024px)">
-              	<img src="${post.imageMob}" alt="learn-more__bg-image" class="slider-item__image">
-            </picture>
-            <div class="slider-item__content">
-                <p class="slider-item__title">${post.title}</p>
-                <div class="slider-item__link-wrapper">
-                    <a href="#" class="slider-item__link">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.16675 19.8332L19.8334 8.1665" stroke="#F3F5F6" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8.16675 8.1665H19.8334V19.8332" stroke="#F3F5F6" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-			`)
-		})
-
-		$('.blog-slider').slick(sliderSettings);
-	}
 
 	$('.js-blog-switch').on('click', function() {
 		$('.js-blog-switch').removeClass('active');
 		$(this).toggleClass('active');
 
-		const currentCategoryId = $(this).data('id');
+		const currentCategoryId = $(this).data('id').toString();
+		$('.blog-slider__item').each(function () {
+			const categoriesPost = $(this).data('categories').toString().split(',');
 
-		const allPostsCurrentCategories = getAllPostsByCategory(currentCategoryId);
-
-		renderBlogPostsInSlider(allPostsCurrentCategories);
+			if (categoriesPost.includes(currentCategoryId)) {
+				$(this).show();
+			} else {
+				$(this).hide();
+			}
+		})
 	});
 });
