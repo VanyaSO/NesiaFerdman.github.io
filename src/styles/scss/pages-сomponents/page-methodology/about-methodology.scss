@@ -1,0 +1,16 @@
+.about-methodology {
+  &__content {
+    height: 100%;
+    align-content: center;
+
+    &-description {
+      &:not(:last-child) {
+        margin-bottom: 12px;
+
+        @include media-breakpoint-up(xl) {
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+}

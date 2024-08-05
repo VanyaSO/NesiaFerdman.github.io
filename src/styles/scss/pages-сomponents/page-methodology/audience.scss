@@ -1,0 +1,14 @@
+.audience {
+  &__content {
+    height: 100%;
+    align-content: center;
+
+    @include media-breakpoint-up(md) {
+
+    }
+  }
+
+  &__list {
+    margin-bottom: 24px;
+  }
+}

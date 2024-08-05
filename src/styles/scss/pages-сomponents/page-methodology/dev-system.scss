@@ -1,0 +1,19 @@
+.dev-system {
+  &__list {
+    padding-left: 28px;
+    list-style-type: decimal;
+
+    &-subtitle {
+      margin-bottom: 12px;
+      font-weight: 400;
+      color: white;
+    }
+
+    &-title {
+      font-family: $primary-font;
+      font-size: 24px;
+      margin-bottom: 16px;
+      color: white;
+    }
+  }
+}

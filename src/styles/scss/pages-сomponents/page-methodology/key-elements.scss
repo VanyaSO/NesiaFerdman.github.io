@@ -1,0 +1,18 @@
+.key-elements {
+  &__tile {
+    height: 100%;
+    padding: 16px;
+    background-color: $defaultGrey;
+    border-radius: 8px;
+
+    @include media-breakpoint-up(xl) {
+      padding: 16px;
+    }
+
+    &-title {
+      margin-bottom: 16px;
+      font-family: $primary-font;
+      color: $white;
+    }
+  }
+}

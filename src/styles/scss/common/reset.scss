@@ -1,0 +1,110 @@
+//Reset and base style
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  color: $mainText;
+  font-size: 18px;
+  font-family: 'Circe', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  background-color: $mainBlack;
+}
+
+.container {
+  padding: 0 16px;
+  position: relative;
+  @include media-breakpoint-up(xxl) {
+    padding: 0;
+  }
+}
+
+button {
+  cursor: pointer;
+  transition: $transition;
+  outline: none;
+}
+
+textarea,
+select,
+input[type='text'],
+input[type='button'],
+input[type='submit'] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  transition: $transition;
+  color: $secondText;
+  @include media-breakpoint-up(xl) {
+    &:hover {
+      color: $grayLight;
+    }
+  }
+
+}
+img {
+  max-width: 100%;
+}
+svg {
+  stroke: $mainText;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+  line-height: 140%;
+}
+
+main {
+  margin-top: 72px;
+  @include media-breakpoint-up(xl) {
+    margin-top: 96px;
+  }
+}
+
+
+h2 {
+  font-size: 32px;
+  @include media-breakpoint-up(xl) {
+    font-size: 48px
+  }
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+  @include media-breakpoint-up(xl) {
+    font-size: 28px;
+  }
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+}
+
+h5 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  @include media-breakpoint-up(xl) {
+    font-size: 32px;
+    font-weight: 500;
+  }
+}
