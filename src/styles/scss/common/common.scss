@@ -8,34 +8,25 @@ html, body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  background-color: #000;
-  color: $white;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-.container {
-  padding-right: 16px;
-  padding-left: 16px;
-  max-width: calc(1280px + 32px);
-  margin: 0 auto;
-}
-
 .section {
-  &-margin {
-    margin: 152px 0;
+  &-padding {
+    padding: 36px 0 36px;
 
-    @media (min-width: $media-desktop) {
-      margin: 152px 0;
+    @media (min-width: $mediaDesktop) {
+      padding: 76px 0 76px;
     }
   }
 
   &__head {
     margin-bottom: 32px;
 
-    @media (min-width: $media-desktop) {
+    @media (min-width: $mediaDesktop) {
       margin-bottom: 64px;
     }
   }
@@ -48,12 +39,12 @@ html {
     margin-bottom: 16px;
     text-align: center;
 
-    @media (min-width: $media-tablet) {
+    @media (min-width: $mediaTablet) {
       margin-bottom: 24px;
       font-size: 46px;
     }
 
-    @media (min-width: $media-desktop) {
+    @media (min-width: $mediaDesktop) {
       font-weight: 400;
       font-size: 48px;
     }
@@ -66,7 +57,7 @@ html {
     font-weight: 400;
     font-size: 18px;
     line-height: 25.2px;
-    color: $gray-extra-light;
+    color: $mainText;
     text-align: center;
   }
 }
@@ -77,7 +68,7 @@ html {
   justify-content: center;
   margin-top: 40px;
 
-  @media (min-width: $media-desktop) {
+  @media (min-width: $mediaDesktop) {
     margin-top: 48px;
   }
 }
@@ -98,32 +89,36 @@ html {
   transition: ease .3s;
   cursor: pointer;
 
-  @media (min-width: $media-tablet) {
+  @media (min-width: $mediaTablet) {
     width: fit-content;
+  }
+
+  &:hover {
+    color: $white;
   }
 }
 
 .primary-button {
-  background-color: $primary-blue;
+  background-color: $primaryBlue;
 
   &:hover {
-    background-color: $primary-blue-hover;
+    background-color: $primaryBlueHover;
   }
   &:focus {
-    background-color: $primary-blue-focus;
+    background-color: $primaryBlueFocus;
   }
 }
 
 .secondary-button {
   background-color: transparent;
-  border: 2px solid $gray-extra-light;
+  border: 2px solid $mainText;
 
-  @media (min-width: $media-tablet) {
+  @media (min-width: $mediaTablet) {
     width: fit-content;
   }
 
   &:hover {
-    border-color: $gray-extra-light;
+    border-color: $mainText;
   }
   &:focus {
     border-color: $white;
@@ -145,10 +140,37 @@ html {
   }
 }
 
+.image-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+}
+
+.custom-li {
+  position: relative;
+  padding-left: 28px;
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    background-color: $grayLight;
+    border-radius: 50%;
+  }
+}
+
 .header,
 .footer {
   height: 48px;
-  background-color: $black;
+  background-color: $mainBlack;
   text-align: center;
   align-content: center;
 }

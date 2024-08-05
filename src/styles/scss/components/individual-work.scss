@@ -2,7 +2,7 @@
   &__content {
     margin-bottom: 24px;
 
-    @media (min-width: $media-tablet) {
+    @media (min-width: $mediaTablet) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 24px;
@@ -18,7 +18,7 @@
     width: 100%;
     margin-bottom: 32px;
 
-    @media (min-width: $media-tablet) {
+    @media (min-width: $mediaTablet) {
       margin-bottom: 0;
     }
   }
@@ -29,7 +29,7 @@
     font-weight: 300;
     font-size: 18px;
     line-height: 25.2px;
-    color: $gray-light;
+    color: $grayLight;
   }
 
   &__description {
@@ -60,7 +60,7 @@
     grid-template-columns: 1fr;
     gap: 16px;
 
-    @media (min-width: $media-desktop) {
+    @media (min-width: $mediaTablet) {
       grid-template-columns: 1fr 1fr;
       gap: 24px;
     }
@@ -69,9 +69,9 @@
   &__tile {
     border-radius: 16px;
     padding: 16px;
-    background-color: $gray-secondary;
+    background-color: $defaultGrey;
 
-    @media (min-width: $media-desktop) {
+    @media (min-width: $mediaDesktop) {
       padding: 24px;
     }
 
@@ -84,7 +84,7 @@
       color: $white;
       margin-bottom: 16px;
 
-      @media (min-width: $media-desktop) {
+      @media (min-width: $mediaDesktop) {
         font-weight: 500;
         font-size: 32px;
         margin-bottom: 24px;
@@ -97,7 +97,7 @@
       font-size: 18px;
       font-weight: 300;
       line-height: 25.2px;
-      color: $gray-extra-light;
+      color: $mainText;
     }
 
     .tile-list {

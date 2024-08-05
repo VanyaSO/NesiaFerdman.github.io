@@ -3,7 +3,7 @@
   &__content {
     min-height: 360px;
 
-    @media (min-width: $media-tablet) {
+    @media (min-width: $mediaTablet) {
       min-height: 498px;
     }
   }
@@ -11,7 +11,7 @@
   &__title {
     margin-bottom: 32px;
 
-    @media (min-width: $media-desktop) {
+    @media (min-width: $mediaDesktop) {
       margin-bottom: 64px;
     }
   }
@@ -22,10 +22,10 @@
     gap: 4px;
     padding: 4px;
     margin: 0 auto 32px;
-    background-color: $gray-secondary;
+    background-color: $defaultGrey;
     border-radius: 100px;
 
-    @media (min-width: $media-desktop) {
+    @media (min-width: $mediaDesktop) {
       margin-bottom: 64px;
     }
   }
@@ -33,7 +33,7 @@
   &__switch {
     width: 160px;
     padding: 10px;
-    color: $gray-extra-light;
+    color: $mainText;
     background-color: transparent;
     border-radius: 100px;
 
@@ -46,7 +46,7 @@
     cursor: pointer;
 
     &.active {
-      color: $black;
+      color: $mainBlack;
       background-color: $white;
     }
   }
@@ -57,7 +57,7 @@
     border-radius: 16px;
     overflow: hidden;
 
-    @media (min-width: $media-desktop) {
+    @media (min-width: $mediaDesktop) {
       margin: 0 12px;
     }
 
@@ -69,11 +69,11 @@
     &__content {
       display: flex;
       align-content: center;
-      background-color: $gray-secondary;
+      background-color: $defaultGrey;
       padding: 16px;
       min-height: 100px;
 
-      @media (min-width: $media-desktop) {
+      @media (min-width: $mediaDesktop) {
         min-height: 90px;
       }
     }
@@ -91,7 +91,7 @@
       line-height: 22.4px;
       color: $white;
 
-      @media (min-width: $media-desktop) {
+      @media (min-width: $mediaDesktop) {
         -webkit-line-clamp: 2;
         max-height: 3em;
         margin-right: 16px;
@@ -111,16 +111,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: $primary-blue;
+      background-color: $primaryBlue;
       border-radius: 50px;
       transition: ease .3s;
 
       &:hover {
-        background-color: $primary-blue-hover;
+        background-color: $primaryBlueHover;
       }
 
       &:focus {
-        background-color: $primary-blue-focus;
+        background-color: $primaryBlueFocus;
       }
     }
   }
@@ -131,7 +131,7 @@
     margin-top: 32px;
     padding: 0 28px;
 
-    @media (min-width: $media-tablet) {
+    @media (min-width: $mediaTablet) {
       display: none;
     }
 
@@ -139,7 +139,7 @@
       width: 100%;
       display: flex;
       height: 6px;
-      background-color: $gray-secondary;
+      background-color: $defaultGrey;
       list-style-type: none;
       border-radius: 12px;
 
@@ -150,11 +150,11 @@
         transition: ease .8s;
 
         &.slick-active {
-          background-color: $gray-neutral;
+          background-color: $grayBG;
         }
 
         &:hover {
-          background-color: $gray-light;
+          background-color: $grayLight;
         }
 
         button {

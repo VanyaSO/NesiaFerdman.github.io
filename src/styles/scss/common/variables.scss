@@ -1,13 +1,36 @@
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1440px
+);
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1280px
+);
+
 $primary-font: 'Cormorant Infant';
 $secondary-font: 'Circe';
-$black: #000;
+
+$mainBlack: #030405;
+$secondBlue: #042F4C;
+$primaryBlue: #005B8D;
+$primaryBlueHover: #074A73;
+$primaryBlueFocus: #006BAA;
+$defaultGrey: #101418;
+$grayBG: #323A45;
+$grayLight: #868F9B;
+$mainText: #D2D9E1;
+$secondText: #F3F5F6;
 $white: #fff;
-$primary-blue: #005B8D;
-$primary-blue-hover: #074A73;
-$primary-blue-focus: #006BAA;
-$gray-light: #868F9B;
-$gray-extra-light: #D2D9E1;
-$gray-neutral: #323A45;
-$gray-secondary: #101418;
-$media-tablet: 768px;
-$media-desktop: 1200px;
+$mainText: #D2D9E1;
+$mediaTablet: 768px;
+$mediaDesktop: 1200px;
+
+$transition: 0.30s ease;
