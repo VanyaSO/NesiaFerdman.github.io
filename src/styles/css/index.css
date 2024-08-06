@@ -12767,6 +12767,11 @@ html {
   height: 100%;
   align-content: center;
 }
+@media (min-width: 768px) {
+  .audience__content {
+    padding-left: 24px;
+  }
+}
 .audience__list {
   margin-bottom: 24px;
 }
